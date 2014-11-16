@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="bellend" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DYP-Fb-oCd" userLabel="VideoView">
+                                <rect key="frame" x="0.0" y="20" width="600" height="560"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RID-st-gpv">
+                                <rect key="frame" x="281" y="550" width="39" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RID-st-gpv" secondAttribute="height" multiplier="1:1" id="81S-OJ-GJd"/>
+                                    <constraint firstAttribute="height" constant="170" id="Fa2-oB-kb3">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="60"/>
+                                    </constraint>
+                                </constraints>
+                                <state key="normal" image="green">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="81S-OJ-GJd"/>
+                                        <exclude reference="Fa2-oB-kb3"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="81S-OJ-GJd"/>
+                                        <include reference="Fa2-oB-kb3"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="action:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="c8b-E9-Mts"/>
+                                    <action selector="btnPlayBeepSound:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3i5-h9-f1Q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DYP-Fb-oCd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="9Ey-6i-zMd"/>
+                            <constraint firstAttribute="centerY" secondItem="DYP-Fb-oCd" secondAttribute="centerY" id="9ni-nk-lW7"/>
+                            <constraint firstAttribute="centerX" secondItem="RID-st-gpv" secondAttribute="centerX" id="arY-Gk-e7Q"/>
+                            <constraint firstAttribute="centerX" secondItem="DYP-Fb-oCd" secondAttribute="centerX" id="dxj-Oh-DkY"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="RID-st-gpv" secondAttribute="bottom" constant="8" symbolic="YES" id="mFA-yb-6a2">
+                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                            </constraint>
+                            <constraint firstItem="DYP-Fb-oCd" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="wJn-jJ-5gW"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="RID-st-gpv"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="arY-Gk-e7Q"/>
+                                <exclude reference="mFA-yb-6a2"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="RID-st-gpv"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="arY-Gk-e7Q"/>
+                                <include reference="mFA-yb-6a2"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="previewView" destination="DYP-Fb-oCd" id="SNk-9U-VYb"/>
+                        <outlet property="recordButton" destination="RID-st-gpv" id="amE-Js-Wet"/>
+                        <outlet property="view" destination="kh9-bI-dsS" id="eGx-Hr-Rnm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-15" y="-318"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="green" width="170" height="170"/>
+    </resources>
+</document>
