@@ -1,4 +1,4 @@
-bellend
+Bellend
 =======
 
-An idea floated by my good friend DavidC
+An idea floated by our good friend David C.
